@@ -1,0 +1,29 @@
+POST http://localhost:5000/character/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODUwNTIzMSwiZXhwIjoxNjU4NTI2ODMxfQ.2oN-ztUimw63htH-W6hVwGcRRtUIGJk98oxJeY8st34
+
+{
+  "name": "Son Jin Woo",
+  "job": "Necromancer"
+}
+
+###
+
+POST http://localhost:5000/character/edit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODUwNTIzMSwiZXhwIjoxNjU4NTI2ODMxfQ.2oN-ztUimw63htH-W6hVwGcRRtUIGJk98oxJeY8st34
+
+{
+  "name": "Namae"
+}
+
+###
+
+DELETE http://localhost:5000/character/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODUwNTIzMSwiZXhwIjoxNjU4NTI2ODMxfQ.2oN-ztUimw63htH-W6hVwGcRRtUIGJk98oxJeY8st34
+
+{
+  "name": "Namae"
+}
+

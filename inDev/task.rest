@@ -1,0 +1,29 @@
+POST http://localhost:5000/task/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODU5NTU2MSwiZXhwIjoxNjU4NjE3MTYxfQ.nj6vx8ooZOnqBWzumvFa_c9RUgTdIs4LtEozZJgRy7M
+
+{
+  "title": "",
+  "description": "",
+  "difficulty": "Easy"
+}
+
+###
+
+GET http://localhost:5000/task/get-all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODU5NTU2MSwiZXhwIjoxNjU4NjE3MTYxfQ.nj6vx8ooZOnqBWzumvFa_c9RUgTdIs4LtEozZJgRy7M
+
+###
+PUT http://localhost:5000/task/edit/62dc35a10a2b8cb3552394fe
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODU5NTU2MSwiZXhwIjoxNjU4NjE3MTYxfQ.nj6vx8ooZOnqBWzumvFa_c9RUgTdIs4LtEozZJgRy7M
+
+{
+  "title": "titulo",
+  "description": "something really important here.",
+  "difficulty": "Very Hard"
+}
+
+###
+DELETE http://localhost:5000/task/delete/62dc35a10a2b8cb3552394fe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGFjODBkNjkxZWQ3N2FkOGQ0MjJlMCIsImlhdCI6MTY1ODU5NTU2MSwiZXhwIjoxNjU4NjE3MTYxfQ.nj6vx8ooZOnqBWzumvFa_c9RUgTdIs4LtEozZJgRy7M
