@@ -1,5 +1,4 @@
 import cors from 'cors';
-import http from 'http';
 import dotenv from 'dotenv';
 import express from 'express';
 
@@ -15,7 +14,6 @@ dotenv.config({ path: './config/.env' });
 
 const app = express();
 const port = process.env.PORT || 5000;
-const server = http.createServer(app);
 
 databaseConnection();
 
@@ -38,5 +36,4 @@ process.on('uncaughtException', (error) => {
   }
 });
 
-server.listen(port, () => console.log(`Running on port ${port}.`));
-
+app.listen(port, () => console.log(`Running on port ${port}.`));
