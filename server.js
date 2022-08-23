@@ -22,8 +22,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
 
-app.get('/', (req, res) => res.send('helo'))
-
 app.use(logError);
 app.use(returnError);
 
