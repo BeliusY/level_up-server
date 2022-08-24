@@ -33,7 +33,7 @@ export const getTasks = async (req, res, next) => {
   try {
     const user = req.user;
     const tasks = await Task.find({ userId: user._id });
-    let today = new Date('8/22/2022').toLocaleString('en-us', {
+    let today = new Date().toLocaleString('en-us', {
       weekday: 'long',
     });
     let todaysTasks = tasks.filter(
