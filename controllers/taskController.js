@@ -23,7 +23,6 @@ export const create = async (req, res, next) => {
 
     res.status(201).send({
       message: 'Successfully created a task.',
-      task,
     });
   } catch (error) {
     next(error);
@@ -34,9 +33,15 @@ export const getTasks = async (req, res, next) => {
   try {
     const user = req.user;
     const tasks = await Task.find({ userId: user._id });
+    let today = new Date('8/22/2022').toLocaleString('en-us', {
+      weekday: 'long',
+    });
+    let todaysTasks = tasks.filter(
+      (t) => (t.isDaily && t.days.includes(today) && !t.completed) || !t.isDaily
+    );
 
     res.status(200).send({
-      tasks,
+      tasks: todaysTasks,
     });
   } catch (error) {
     next(error);
