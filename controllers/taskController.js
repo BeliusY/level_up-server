@@ -139,9 +139,9 @@ export const complete = async (req, res, next) => {
       cron.schedule(`0 0 0 * * ${task.days.join(',')}`, () => {
         task.completed = false;
       });
+      await task.save();
     }
 
-    await task.save();
     await character.save();
 
     res.status(200).send({
